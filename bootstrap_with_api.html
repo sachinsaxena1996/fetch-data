@@ -36,7 +36,7 @@
             var url = proxyurl + 'http://aimtell.com/files/sites.json';
             $.get(url).then(function (res) {
                 $.each(res.sites, function(i, data){
-                    $("table").append("<tr><td>" + data.id + "</td><td>" + data.name + "</td>" + "<td>" + data.url + "</td></tr>");
+                    $("thead").append("<tr><td>" + data.id + "</td><td>" + data.name + "</td>" + "<td>" + data.url + "</td></tr>");
                 })  
             }).fail(function() {
                 alert( "Aimtell get sites API not working" );
